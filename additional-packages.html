@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дополнительные пакеты</title>
+    <!-- Подключение Bootstrap CSS через CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        main {
+            flex-grow: 1;
+            padding-top: 50px;
+            padding-bottom: 150px;
+            margin: 20px;
+        }
+        .pricing-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            gap: 15px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            padding: 10px;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .card-title {
+            font-size: 2rem;
+            color: #007bff;
+        }
+        .card-text {
+            font-size: 1rem;
+        }
+        .btn-primary {
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+        header {
+            padding-left: 20px;
+            background: linear-gradient(90deg, rgba(0,212,255,1) 60%, rgba(9,9,121,1) 100%);
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-text {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+<header class="text-white text-center py-5">
+    <h1>Дополнительные пакеты услуг</h1>
+    <p>Выберите дополнительные функции, которые вам необходимы</p>
+</header>
+
+<main class="container my-5">
+    <div class="pricing-table">
+        <!-- Дополнительный пакет 1 -->
+        <div class="card text-center">
+            <div class="card-header bg-info text-white">
+               Новый
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">500 руб/мес</h5>
+                <p class="card-text">Дополнительные функции сервиса.</p>
+                <a href="#1" class="btn btn-primary">Купить</a>
+            </div>
+        </div>
+
+        <!-- Дополнительный пакет 2 -->
+        <div class="card text-center">
+            <div class="card-header bg-info text-white">
+                Супер
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">300 руб/мес</h5>
+                <p class="card-text">Бонусные функции сервиса.</p>
+                <a href="#2" class="btn btn-primary">Купить</a>
+            </div>
+        </div>
+
+        <!-- Дополнительный пакет 3 -->
+        <div class="card text-center">
+            <div class="card-header bg-info text-white">
+                Удачный
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">700 руб/мес</h5>
+                <p class="card-text">Расширенные функции сервиса.</p>
+                <a href="#3" class="btn btn-primary">Купить</a>
+            </div>
+        </div>
+
+        <!-- Дополнительный пакет 4 -->
+        <div class="card text-center">
+            <div class="card-header bg-info text-white">
+                Вариант
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">450 руб/мес</h5>
+                <p class="card-text">Улучшенные функции сервиса.</p>
+                <a href="#4" class="btn btn-primary">Купить</a>
+            </div>
+        </div>
+
+        <!-- Дополнительный пакет 5 -->
+        <div class="card text-center">
+            <div class="card-header bg-info text-white">
+                Любимый
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">600 руб/мес</h5>
+                <p class="card-text">Премиум функции сервиса.</p>
+                <a href="#5" class="btn btn-primary">Купить</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text-center mt-5">
+        <a href="index.html" class="btn btn-outline-secondary btn-lg">Вернуться к основным пакетам</a>
+    </div>
+</main>
+
+<footer class="bg-light text-center py-4">
+    <p class="footer-text">&copy; 2024 Наш Сервис. Все права защищены.</p>
+</footer>
+
+<!-- Подключение Bootstrap JS через CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
