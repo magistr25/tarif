@@ -16,7 +16,7 @@
         }
         main {
             flex-grow: 1;
-            padding-top: 50px;
+            padding-top: 10px;
             padding-bottom: 150px;
             margin: 20px;
         }
@@ -45,11 +45,19 @@
         }
         .card-text {
             font-size: 1rem;
+            min-height: 100px;
         }
-        .btn-primary {
-            border-radius: 50px;
-            padding: 10px 20px;
-            font-size: 1rem;
+        .card-body {
+            position: relative;
+        }
+        .card-content {
+            position: relative;
+            padding-bottom: 50px; /* Для размещения кнопки */
+        }
+        .card-body .btn-primary {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
         }
         header {
             padding-left: 20px;
@@ -80,11 +88,20 @@
         <!-- Дополнительный пакет 1 -->
         <div class="card text-center">
             <div class="card-header bg-info text-white">
-               Новый
+                Новый
             </div>
-            <div class="card-body">
-                <h5 class="card-title">500 руб/мес</h5>
-                <p class="card-text">Дополнительные функции сервиса.</p>
+            <div class="card-body card-content">
+                <h5 class="card-title" id="package1Price">500 руб/мес</h5>
+                <div class="card-text">Дополнительные функции сервиса.</div>
+                <div class="mb-3">
+                    <label for="newPackageDuration" class="form-label">Выберите срок:</label>
+                    <select class="form-select" id="newPackageDuration" onchange="updatePrice(this)">
+                        <option value="1" data-price="199">1 месяц</option>
+                        <option value="3" data-price="549">3 месяца</option>
+                        <option value="6" data-price="999">6 месяцев</option>
+                        <option value="12" data-price="1799">1 год</option>
+                    </select>
+                </div>
                 <a href="#1" class="btn btn-primary">Купить</a>
             </div>
         </div>
@@ -94,9 +111,18 @@
             <div class="card-header bg-info text-white">
                 Супер
             </div>
-            <div class="card-body">
-                <h5 class="card-title">300 руб/мес</h5>
-                <p class="card-text">Бонусные функции сервиса.</p>
+            <div class="card-body card-content">
+                <h5 class="card-title" id="package2Price">300 руб/мес</h5>
+                <div class="card-text">Бонусные функции сервиса.</div>
+                <div class="mb-3">
+                    <label for="superPackageDuration" class="form-label">Выберите срок:</label>
+                    <select class="form-select" id="superPackageDuration" onchange="updatePrice(this)">
+                        <option value="1" data-price="199">1 месяц</option>
+                        <option value="3" data-price="549">3 месяца</option>
+                        <option value="6" data-price="999">6 месяцев</option>
+                        <option value="12" data-price="1799">1 год</option>
+                    </select>
+                </div>
                 <a href="#2" class="btn btn-primary">Купить</a>
             </div>
         </div>
@@ -106,9 +132,18 @@
             <div class="card-header bg-info text-white">
                 Удачный
             </div>
-            <div class="card-body">
-                <h5 class="card-title">700 руб/мес</h5>
-                <p class="card-text">Расширенные функции сервиса.</p>
+            <div class="card-body card-content">
+                <h5 class="card-title" id="package3Price">700 руб/мес</h5>
+                <div class="card-text">Расширенные функции сервиса.</div>
+                <div class="mb-3">
+                    <label for="luckyPackageDuration" class="form-label">Выберите срок:</label>
+                    <select class="form-select" id="luckyPackageDuration" onchange="updatePrice(this)">
+                        <option value="1" data-price="199">1 месяц</option>
+                        <option value="3" data-price="549">3 месяца</option>
+                        <option value="6" data-price="999">6 месяцев</option>
+                        <option value="12" data-price="1799">1 год</option>
+                    </select>
+                </div>
                 <a href="#3" class="btn btn-primary">Купить</a>
             </div>
         </div>
@@ -118,9 +153,18 @@
             <div class="card-header bg-info text-white">
                 Вариант
             </div>
-            <div class="card-body">
-                <h5 class="card-title">450 руб/мес</h5>
-                <p class="card-text">Улучшенные функции сервиса.</p>
+            <div class="card-body card-content">
+                <h5 class="card-title" id="package4Price">450 руб/мес</h5>
+                <div class="card-text">Улучшенные функции сервиса.</div>
+                <div class="mb-3">
+                    <label for="variantPackageDuration" class="form-label">Выберите срок:</label>
+                    <select class="form-select" id="variantPackageDuration" onchange="updatePrice(this)">
+                        <option value="1" data-price="199">1 месяц</option>
+                        <option value="3" data-price="549">3 месяца</option>
+                        <option value="6" data-price="999">6 месяцев</option>
+                        <option value="12" data-price="1799">1 год</option>
+                    </select>
+                </div>
                 <a href="#4" class="btn btn-primary">Купить</a>
             </div>
         </div>
@@ -130,9 +174,18 @@
             <div class="card-header bg-info text-white">
                 Любимый
             </div>
-            <div class="card-body">
-                <h5 class="card-title">600 руб/мес</h5>
-                <p class="card-text">Премиум функции сервиса.</p>
+            <div class="card-body card-content">
+                <h5 class="card-title" id="package5Price">600 руб/мес</h5>
+                <div class="card-text">Премиум функции сервиса.</div>
+                <div class="mb-3">
+                    <label for="favoritePackageDuration" class="form-label">Выберите срок:</label>
+                    <select class="form-select" id="favoritePackageDuration" onchange="updatePrice(this)">
+                        <option value="1" data-price="199">1 месяц</option>
+                        <option value="3" data-price="549">3 месяца</option>
+                        <option value="6" data-price="999">6 месяцев</option>
+                        <option value="12" data-price="1799">1 год</option>
+                    </select>
+                </div>
                 <a href="#5" class="btn btn-primary">Купить</a>
             </div>
         </div>
@@ -152,5 +205,16 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+<script>
+    function updatePrice(selectElement) {
+        const priceElement = selectElement.closest('.card-body').querySelector('.card-title');
+        const selectedOption = selectElement.options[selectElement.selectedIndex];
+        const price = selectedOption.getAttribute('data-price');
+        priceElement.textContent = price + ' руб/мес';
+    }
+
+</script>
+
 </body>
 </html>
